@@ -20,17 +20,16 @@ extension UIImageView {
             image = placeholderImage
             return
         }
-        guard let url = URL(string: urlValue) else {return}
-        #if DEBUG
-        print(urlValue)
-        #endif
+        guard let url = URL(string: urlValue) else { return }
         
         self.startActivity(with: style)
         
-        self.sd_setImage(with: url,
-                         placeholderImage: placeholderImage,
-                         options: .highPriority,
-                         progress: nil) { [weak self] (image, error, _, _) in
+        self.sd_setImage(
+            with: url,
+            placeholderImage: placeholderImage,
+            options: .highPriority,
+            progress: nil
+        ) { [weak self] (image, error, _, _) in
             guard let strongSelf = self else { return }
             strongSelf.removeActivity()
             if error != nil {

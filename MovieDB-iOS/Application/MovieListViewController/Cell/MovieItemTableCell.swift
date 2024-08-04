@@ -47,17 +47,6 @@ final class MovieItemTableCell: UITableViewCell {
         return label
     }()
     
-    private lazy var verticalTextStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.spacing = Constants.stackViewSpacing
-        stackView.distribution = .fillProportionally
-        stackView.addArrangedSubview(titleAndYearLabel)
-        stackView.addArrangedSubview(genresLabel)
-        stackView.addArrangedSubview(ratingLabel)
-        return stackView
-    }()
-    
     // MARK: - Init
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -73,8 +62,8 @@ final class MovieItemTableCell: UITableViewCell {
         super.prepareForReuse()
         titleAndYearLabel.text = nil
         genresLabel.text = nil
-        ratingLabel.text = nil
-        movieImageView.image = .moviePosterPlaceholder
+        ratingLabel.attributedText = nil
+        movieImageView.image = nil
     }
     
     override func layoutSubviews() {
@@ -98,13 +87,14 @@ final class MovieItemTableCell: UITableViewCell {
     
     // MARK: - Public methods
     
-    func setupCell(with model: String) {
-        titleAndYearLabel.text = model
-        genresLabel.text = "Genres"
+    func setupCell(with DTO: MovieItemDTO) {
+        titleAndYearLabel.text = DTO.titleAndYear
+        genresLabel.text = DTO.localGenres
         ratingLabel.attributedText = UIMaker.createAttributedText(
-            text: "7.8",
+            text: DTO.averageRating,
             symbolName: "star.fill"
         )
+        movieImageView.downloadImage(url: DTO.posterStringURL, withActivity: .medium)
     }
     
     // MARK: - Private methods
@@ -136,11 +126,23 @@ final class MovieItemTableCell: UITableViewCell {
             make.leading.equalToSuperview().offset(Constants.innerHorizontalInset)
         }
         
-        container.addSubview(verticalTextStackView)
-        verticalTextStackView.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(Constants.innerVerticalInset)
+        container.addSubview(titleAndYearLabel)
+        titleAndYearLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(Constants.innerVerticalInset / 2)
             make.leading.equalTo(movieImageView.snp.trailing).offset(Constants.innerHorizontalInset)
             make.trailing.equalToSuperview().inset(Constants.innerHorizontalInset)
+        }
+        
+        container.addSubview(genresLabel)
+        genresLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleAndYearLabel.snp.bottom).offset(Constants.innerVerticalInset)
+            make.leading.trailing.equalTo(titleAndYearLabel)
+        }
+        
+        container.addSubview(ratingLabel)
+        ratingLabel.snp.makeConstraints { make in
+            make.top.equalTo(genresLabel.snp.bottom).offset(Constants.innerVerticalInset)
+            make.leading.trailing.equalTo(titleAndYearLabel)
         }
     }
     

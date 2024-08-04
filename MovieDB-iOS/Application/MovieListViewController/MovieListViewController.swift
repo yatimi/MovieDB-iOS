@@ -29,6 +29,8 @@ final class MovieListViewController: SearchViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        observeViewStates()
+        getMovieList()
     }
     
     // MARK: - User actions
@@ -74,11 +76,72 @@ final class MovieListViewController: SearchViewController {
         view.backgroundColor = .white
     }
     
+    // MARK: - Refresh Control
+    
+    override func refreshData() {
+        switch viewModel.paginationType {
+        case .discover:
+            getMovieList(forceRefresh: true)
+        case .search:
+            viewModel.search(viewModel.query, forceRefresh: true)
+        }
+        refreshControl.endRefreshing()
+    }
+    
+    private func observeViewStates() {
+        viewModel.didUpdateViewState = { [weak self] state in
+            guard let self = self else { return }
+
+            self.hideLoader()
+            
+            switch state {
+            case .loading:
+                if viewModel.numberOfEntities == 0 {
+                    self.showLoader()
+                }
+            case let .failed(error):
+                self.showErrorAlert(error.localizedDescription)
+            default:
+                break
+            }
+            
+            self.reloadTableView()
+        }
+    }
+    
+    // MARK: - Network Requests
+    
+    private func getMovieList(forceRefresh: Bool = false) {
+        viewModel.getMovies(forceRefresh: forceRefresh)
+    }
+    
+    private func fetchNextPage() {
+        viewModel.paginationModel.next()
+        switch viewModel.paginationType {
+        case .discover:
+            getMovieList()
+        case .search:
+            viewModel.search(viewModel.query, forceRefresh: false)
+        }
+    }
+    
+    // MARK: - TableView Methods
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(type: MovieItemTableCell.self)
-        let model = viewModel.dataSource[indexPath.row]
-        cell.setupCell(with: model)
+        if let modelDTO = viewModel.dataSource[safe: indexPath.row] {
+            cell.setupCell(with: modelDTO)
+        }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let canPrefetchNext: Bool = indexPath.row >= viewModel.numberOfEntities - Constants.prefetchValue
+        let notLoading: Bool = viewModel.viewState != .loading
+        let isNotFullUploaded: Bool = !viewModel.paginationModel.isFullUploaded
+        if canPrefetchNext && notLoading && isNotFullUploaded {
+            fetchNextPage()
+        }
     }
     
     private struct Constants {

@@ -76,6 +76,16 @@ class SearchViewController: UIViewController {
     
     // MARK: - Public methods
     
+    func showLoader() {
+        emptyListLabel.isHidden = true
+        view.startActivity()
+    }
+    
+    func hideLoader() {
+        view.removeActivity()
+        emptyListLabel.isHidden = viewModel.numberOfEntities != 0
+    }
+    
     func reloadTableView() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -108,10 +118,6 @@ class SearchViewController: UIViewController {
     }
     
     // MARK: - Private methods
-    
-    private func handleEmptyView() {
-        emptyListLabel.isHidden = viewModel.numberOfEntities != 0
-    }
     
     private func setupSearchController() {
         searchController.searchBar.placeholder = Constants.searchBarPlaceholderText

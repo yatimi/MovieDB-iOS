@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9604285F2C600DFF00640712 /* AppDelegate+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9604285E2C600DFF00640712 /* AppDelegate+Appearance.swift */; };
+		960428622C6017CF00640712 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960428612C6017CF00640712 /* MovieDetailsViewController.swift */; };
+		960428642C6017E100640712 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960428632C6017E100640712 /* MovieDetailsViewModel.swift */; };
+		960428672C60181C00640712 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960428662C60181C00640712 /* NSObject+ClassName.swift */; };
+		9604286A2C6034FB00640712 /* SeparatedInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960428692C6034FB00640712 /* SeparatedInfoView.swift */; };
+		9604286E2C60394700640712 /* FullPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9604286D2C60394700640712 /* FullPhotoViewController.swift */; };
+		960428702C60395400640712 /* FullPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9604286F2C60395400640712 /* FullPhotoViewModel.swift */; };
+		960428752C603E1C00640712 /* InteractiveImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960428742C603E1C00640712 /* InteractiveImageView.swift */; };
 		965F38832C5F89F90059CCDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F38822C5F89F90059CCDE /* AppDelegate.swift */; };
 		965F38852C5F89F90059CCDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F38842C5F89F90059CCDE /* SceneDelegate.swift */; };
 		965F388C2C5F89FB0059CCDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 965F388B2C5F89FB0059CCDE /* Assets.xcassets */; };
@@ -49,6 +56,13 @@
 
 /* Begin PBXFileReference section */
 		9604285E2C600DFF00640712 /* AppDelegate+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Appearance.swift"; sourceTree = "<group>"; };
+		960428612C6017CF00640712 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		960428632C6017E100640712 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
+		960428662C60181C00640712 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
+		960428692C6034FB00640712 /* SeparatedInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatedInfoView.swift; sourceTree = "<group>"; };
+		9604286D2C60394700640712 /* FullPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPhotoViewController.swift; sourceTree = "<group>"; };
+		9604286F2C60395400640712 /* FullPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPhotoViewModel.swift; sourceTree = "<group>"; };
+		960428742C603E1C00640712 /* InteractiveImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveImageView.swift; sourceTree = "<group>"; };
 		965F387F2C5F89F90059CCDE /* MovieDB-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MovieDB-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		965F38822C5F89F90059CCDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		965F38842C5F89F90059CCDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +123,59 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		960428602C6017C600640712 /* MovieDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9604286B2C60393C00640712 /* ViewControllers */,
+				960428682C6034F500640712 /* View */,
+				960428632C6017E100640712 /* MovieDetailsViewModel.swift */,
+				960428612C6017CF00640712 /* MovieDetailsViewController.swift */,
+			);
+			path = MovieDetailsViewController;
+			sourceTree = "<group>";
+		};
+		960428652C60181700640712 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				960428662C60181C00640712 /* NSObject+ClassName.swift */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		960428682C6034F500640712 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				960428692C6034FB00640712 /* SeparatedInfoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9604286B2C60393C00640712 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9604286C2C60394300640712 /* FullPhotoViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9604286C2C60394300640712 /* FullPhotoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				960428712C60399400640712 /* View */,
+				9604286D2C60394700640712 /* FullPhotoViewController.swift */,
+				9604286F2C60395400640712 /* FullPhotoViewModel.swift */,
+			);
+			path = FullPhotoViewController;
+			sourceTree = "<group>";
+		};
+		960428712C60399400640712 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				960428742C603E1C00640712 /* InteractiveImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		965F38762C5F89F90059CCDE = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +227,7 @@
 			children = (
 				965F389F2C5F8FCE0059CCDE /* SearchViewController */,
 				965F38992C5F8C7C0059CCDE /* MovieListViewController */,
+				960428602C6017C600640712 /* MovieDetailsViewController */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -240,6 +308,7 @@
 		965F38AA2C5F91190059CCDE /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				960428652C60181700640712 /* NSObject */,
 				965F38F42C6008D00059CCDE /* Collection */,
 			);
 			path = Foundation;
@@ -464,9 +533,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9604286E2C60394700640712 /* FullPhotoViewController.swift in Sources */,
+				960428642C6017E100640712 /* MovieDetailsViewModel.swift in Sources */,
 				965F38A12C5F8FE70059CCDE /* SearchViewController.swift in Sources */,
 				965F38832C5F89F90059CCDE /* AppDelegate.swift in Sources */,
 				965F38BC2C5F96210059CCDE /* UIView + ActivityIndicator.swift in Sources */,
+				960428702C60395400640712 /* FullPhotoViewModel.swift in Sources */,
 				965F38F02C5FD76B0059CCDE /* MoviesNetworkServiceImpl.swift in Sources */,
 				965F38B12C5F922B0059CCDE /* MovieItemTableCell.swift in Sources */,
 				965F38852C5F89F90059CCDE /* SceneDelegate.swift in Sources */,
@@ -480,6 +552,7 @@
 				965F38EC2C5FD60B0059CCDE /* MovieItemDTO.swift in Sources */,
 				965F38BA2C5F95F30059CCDE /* UIImageView+DownloadImage.swift in Sources */,
 				965F38A72C5F90800059CCDE /* MovieSortOption.swift in Sources */,
+				960428622C6017CF00640712 /* MovieDetailsViewController.swift in Sources */,
 				965F38A32C5F90420059CCDE /* SearchableTableViewModel.swift in Sources */,
 				965F38D62C5FD2C80059CCDE /* MoviesNetworkError.swift in Sources */,
 				965F38F32C5FD7860059CCDE /* MoviesTarget.swift in Sources */,
@@ -487,8 +560,11 @@
 				965F38E02C5FD34D0059CCDE /* MovieResponseItem.swift in Sources */,
 				965F38DA2C5FD3190059CCDE /* MoviesNetworkService.swift in Sources */,
 				965F38D32C5FD2AF0059CCDE /* NetworkServiceExecutable.swift in Sources */,
+				960428672C60181C00640712 /* NSObject+ClassName.swift in Sources */,
 				965F38C52C5F9A060059CCDE /* AppConstants.swift in Sources */,
 				965F38E22C5FD35B0059CCDE /* GenresResponse.swift in Sources */,
+				960428752C603E1C00640712 /* InteractiveImageView.swift in Sources */,
+				9604286A2C6034FB00640712 /* SeparatedInfoView.swift in Sources */,
 				965F38C72C5F9A2F0059CCDE /* UIMaker.swift in Sources */,
 				965F38EE2C5FD6340059CCDE /* MovieGenreType.swift in Sources */,
 				965F389E2C5F8F130059CCDE /* MovieListViewModel.swift in Sources */,
@@ -640,20 +716,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SV7MAB22UW;
+				DEVELOPMENT_TEAM = 8QU7S5P236;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MovieDB-iOS/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "yatimi.MovieDB-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oromoon.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -668,20 +743,19 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SV7MAB22UW;
+				DEVELOPMENT_TEAM = 8QU7S5P236;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MovieDB-iOS/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "yatimi.MovieDB-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.oromoon.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

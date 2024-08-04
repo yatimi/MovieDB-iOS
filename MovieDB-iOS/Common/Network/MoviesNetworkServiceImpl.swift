@@ -32,4 +32,11 @@ final class MoviesNetworkServiceImpl: MoviesNetworkService {
         return networkService.execute(target: target, completionHandler: completionHandler)
     }
     
+    func getMovieDetails(
+        id: Int,
+        completionHandler: @escaping ((Result<MovieResponseItem, MoviesNetworkError>) -> Void)
+    ) -> DataRequest? {
+        let target = MoviesTarget.getMovieDetails(movieId: id)
+        return networkService.execute(target: target, completionHandler: completionHandler)
+    }
 }

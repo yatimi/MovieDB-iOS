@@ -53,9 +53,9 @@ struct MovieItemDTO {
         return "\(AppConstants.MovieDB.mediumImageSizePath)\(posterPath)"
     }
     
-    var backdropStringURL: String?? {
+    var backdropStringURL: String? {
         guard let backdropPath else { return nil }
-        return "\(AppConstants.MovieDB.mediumImageSizePath)\(backdropPath)"
+        return "\(AppConstants.MovieDB.originalImageSizePath)\(backdropPath)"
     }
     
     var localGenres: String {
@@ -69,6 +69,7 @@ struct MovieItemDTO {
         guard let genres else { return .init() }
         return genres
             .compactMap { $0.name }
+            .map { $0.capitalized }
             .joined(separator: ", ")
     }
     

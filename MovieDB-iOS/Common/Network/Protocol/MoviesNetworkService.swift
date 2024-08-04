@@ -23,4 +23,10 @@ protocol MoviesNetworkService {
         completionHandler: @escaping ((Result<MovieListResponse, MoviesNetworkError>) -> Void)
     ) -> DataRequest?
     
+    @discardableResult
+    func getMovieDetails(
+        id: Int,
+        completionHandler: @escaping ((Result<MovieResponseItem, MoviesNetworkError>) -> Void)
+    ) -> DataRequest?
+    
 }

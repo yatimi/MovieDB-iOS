@@ -45,11 +45,29 @@ final class MovieListViewModel: SearchableTableViewModel {
         self.viewState = newState
     }
     
-    // MARK: - Public methods
+    // MARK: - Network Requests
     
     func sortMovies(by option: MovieSortOption) {
         sortOption = option
         getMovies(forceRefresh: true)
+    }
+    
+    func getMovieDetails(
+        at indexPath: IndexPath,
+        completionHandler: @escaping (MovieItemDTO?) -> Void
+    ) {
+        let id: Int = dataSource[indexPath.item].id
+        networkManager.getMovieDetails(id: id) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let response):
+                let dto = MovieItemDTO(responseItem: response)
+                completionHandler(dto)
+            case .failure(let error):
+                self.setState(.failed(error))
+                completionHandler(nil)
+            }
+        }
     }
     
     func search(_ query: String, forceRefresh: Bool = false) {

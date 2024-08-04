@@ -76,7 +76,19 @@ final class MovieListViewController: SearchViewController {
         view.backgroundColor = .white
     }
     
-    // MARK: - Refresh Control
+    // MARK: - User actions
+    
+    private func didSelectMovie(at indexPath: IndexPath) {
+        showLoader()
+        viewModel.getMovieDetails(at: indexPath) { [weak self] movieItemDTO in
+            guard let self = self else { return }
+            self.hideLoader()
+            guard let movieItemDTO else { return }
+            let viewModel = MovieDetailsViewModel(movieItemDTO: movieItemDTO)
+            let viewController = MovieDetailsViewController(viewModel: viewModel)
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
     
     override func refreshData() {
         switch viewModel.paginationType {
@@ -142,6 +154,10 @@ final class MovieListViewController: SearchViewController {
         if canPrefetchNext && notLoading && isNotFullUploaded {
             fetchNextPage()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        didSelectMovie(at: indexPath)
     }
     
     private struct Constants {

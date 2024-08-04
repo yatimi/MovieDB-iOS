@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9604285F2C600DFF00640712 /* AppDelegate+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9604285E2C600DFF00640712 /* AppDelegate+Appearance.swift */; };
 		965F38832C5F89F90059CCDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F38822C5F89F90059CCDE /* AppDelegate.swift */; };
 		965F38852C5F89F90059CCDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F38842C5F89F90059CCDE /* SceneDelegate.swift */; };
 		965F388C2C5F89FB0059CCDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 965F388B2C5F89FB0059CCDE /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9604285E2C600DFF00640712 /* AppDelegate+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Appearance.swift"; sourceTree = "<group>"; };
 		965F387F2C5F89F90059CCDE /* MovieDB-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MovieDB-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		965F38822C5F89F90059CCDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		965F38842C5F89F90059CCDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9604285D2C600DF000640712 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9604285E2C600DFF00640712 /* AppDelegate+Appearance.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
 		965F38762C5F89F90059CCDE = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +228,7 @@
 		965F38A92C5F91150059CCDE /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				9604285D2C600DF000640712 /* AppDelegate */,
 				965F38C82C5F9AC60059CCDE /* UIViewController */,
 				965F38BD2C5F97810059CCDE /* UITableView */,
 				965F38B82C5F95EC0059CCDE /* UIImage */,
@@ -484,6 +495,7 @@
 				965F38D82C5FD2D60059CCDE /* Messages.swift in Sources */,
 				965F38D02C5FD25A0059CCDE /* API.swift in Sources */,
 				965F38E72C5FD3B20059CCDE /* NetworkService.swift in Sources */,
+				9604285F2C600DFF00640712 /* AppDelegate+Appearance.swift in Sources */,
 				965F38AE2C5F91330059CCDE /* UIView+Intersection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

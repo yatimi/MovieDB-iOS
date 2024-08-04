@@ -23,7 +23,8 @@ private extension SceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
         
-        let viewController = MovieListViewController()
+        let viewModel = MovieListViewModel()
+        let viewController = MovieListViewController(viewModel: viewModel)
         let rootViewController = UINavigationController(rootViewController: viewController)
         window?.rootViewController = rootViewController
     }

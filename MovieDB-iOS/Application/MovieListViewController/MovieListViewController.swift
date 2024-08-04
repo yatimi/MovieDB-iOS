@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MovieListViewController.swift
 //  MovieDB-iOS
 //
 //  Created by Artem Zabihailo on 04.08.2024.
@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+final class MovieListViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
     }
-
-
+    
 }
-

@@ -9,6 +9,10 @@ import UIKit
 
 final class MovieDetailsViewController: UIViewController {
     
+    // MARK: - Closure
+    
+    var onOpenFullPhoto: ((UIImage) -> Void)?
+    
     // MARK: - Interface
     
     private let scrollView = UIScrollView()
@@ -90,9 +94,7 @@ final class MovieDetailsViewController: UIViewController {
             let image = posterImageView.image else {
             return
         }
-        let viewModel = FullPhotoViewModel(image: image)
-        let viewController = FullPhotoViewController(viewModel: viewModel)
-        present(viewController, animated: true)
+        onOpenFullPhoto?(image)
     }
     
     // MARK: - Private methods

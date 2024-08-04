@@ -15,6 +15,16 @@
 		9604286E2C60394700640712 /* FullPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9604286D2C60394700640712 /* FullPhotoViewController.swift */; };
 		960428702C60395400640712 /* FullPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9604286F2C60395400640712 /* FullPhotoViewModel.swift */; };
 		960428752C603E1C00640712 /* InteractiveImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960428742C603E1C00640712 /* InteractiveImageView.swift */; };
+		960428792C60445D00640712 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960428782C60445D00640712 /* AppCoordinator.swift */; };
+		9604287D2C6044C600640712 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9604287C2C6044C600640712 /* BaseCoordinator.swift */; };
+		960428822C6044F000640712 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9604287F2C6044EF00640712 /* RouterProtocol.swift */; };
+		960428832C6044F000640712 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960428802C6044EF00640712 /* Coordinator.swift */; };
+		960428842C6044F000640712 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960428812C6044F000640712 /* Presentable.swift */; };
+		960428862C60451B00640712 /* DeepLinkOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960428852C60451B00640712 /* DeepLinkOption.swift */; };
+		960428882C6045AA00640712 /* AppCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960428872C6045AA00640712 /* AppCoordinatorFactory.swift */; };
+		9604288A2C6045E300640712 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960428892C6045E300640712 /* Router.swift */; };
+		9604288D2C60460500640712 /* MovieCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9604288C2C60460500640712 /* MovieCoordinator.swift */; };
+		9604288F2C60464A00640712 /* MovieCoordinatorControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9604288E2C60464A00640712 /* MovieCoordinatorControllersFactory.swift */; };
 		965F38832C5F89F90059CCDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F38822C5F89F90059CCDE /* AppDelegate.swift */; };
 		965F38852C5F89F90059CCDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F38842C5F89F90059CCDE /* SceneDelegate.swift */; };
 		965F388C2C5F89FB0059CCDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 965F388B2C5F89FB0059CCDE /* Assets.xcassets */; };
@@ -63,6 +73,16 @@
 		9604286D2C60394700640712 /* FullPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPhotoViewController.swift; sourceTree = "<group>"; };
 		9604286F2C60395400640712 /* FullPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPhotoViewModel.swift; sourceTree = "<group>"; };
 		960428742C603E1C00640712 /* InteractiveImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveImageView.swift; sourceTree = "<group>"; };
+		960428782C60445D00640712 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		9604287C2C6044C600640712 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		9604287F2C6044EF00640712 /* RouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		960428802C6044EF00640712 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		960428812C6044F000640712 /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		960428852C60451B00640712 /* DeepLinkOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkOption.swift; sourceTree = "<group>"; };
+		960428872C6045AA00640712 /* AppCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorFactory.swift; sourceTree = "<group>"; };
+		960428892C6045E300640712 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9604288C2C60460500640712 /* MovieCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCoordinator.swift; sourceTree = "<group>"; };
+		9604288E2C60464A00640712 /* MovieCoordinatorControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCoordinatorControllersFactory.swift; sourceTree = "<group>"; };
 		965F387F2C5F89F90059CCDE /* MovieDB-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MovieDB-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		965F38822C5F89F90059CCDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		965F38842C5F89F90059CCDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +196,63 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		960428762C60444000640712 /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				960428782C60445D00640712 /* AppCoordinator.swift */,
+				960428872C6045AA00640712 /* AppCoordinatorFactory.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		960428772C60444A00640712 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				965F389F2C5F8FCE0059CCDE /* SearchViewController */,
+				965F38992C5F8C7C0059CCDE /* MovieListViewController */,
+				960428602C6017C600640712 /* MovieDetailsViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9604287A2C60448900640712 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9604287B2C60448E00640712 /* CoordinatorBase */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9604287B2C60448E00640712 /* CoordinatorBase */ = {
+			isa = PBXGroup;
+			children = (
+				9604287E2C6044E600640712 /* Protocols */,
+				9604287C2C6044C600640712 /* BaseCoordinator.swift */,
+				960428892C6045E300640712 /* Router.swift */,
+			);
+			path = CoordinatorBase;
+			sourceTree = "<group>";
+		};
+		9604287E2C6044E600640712 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				960428802C6044EF00640712 /* Coordinator.swift */,
+				960428812C6044F000640712 /* Presentable.swift */,
+				9604287F2C6044EF00640712 /* RouterProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9604288B2C6045FD00640712 /* MovieCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				960428772C60444A00640712 /* ViewControllers */,
+				9604288C2C60460500640712 /* MovieCoordinator.swift */,
+				9604288E2C60464A00640712 /* MovieCoordinatorControllersFactory.swift */,
+			);
+			path = MovieCoordinator;
+			sourceTree = "<group>";
+		};
 		965F38762C5F89F90059CCDE = {
 			isa = PBXGroup;
 			children = (
@@ -225,9 +302,8 @@
 		965F38982C5F8C760059CCDE /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				965F389F2C5F8FCE0059CCDE /* SearchViewController */,
-				965F38992C5F8C7C0059CCDE /* MovieListViewController */,
-				960428602C6017C600640712 /* MovieDetailsViewController */,
+				9604288B2C6045FD00640712 /* MovieCoordinator */,
+				960428762C60444000640712 /* AppCoordinator */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -245,6 +321,7 @@
 		965F389C2C5F8D290059CCDE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9604287A2C60448900640712 /* Helpers */,
 				965F38E82C5FD4020059CCDE /* Utilities */,
 				965F38C32C5F99FD0059CCDE /* AppConstants */,
 				965F38CE2C5FD2520059CCDE /* Network */,
@@ -280,6 +357,7 @@
 				965F38D72C5FD2D60059CCDE /* Messages.swift */,
 				965F38E42C5FD3830059CCDE /* PaginationModel.swift */,
 				965F38ED2C5FD6340059CCDE /* MovieGenreType.swift */,
+				960428852C60451B00640712 /* DeepLinkOption.swift */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -533,14 +611,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9604288D2C60460500640712 /* MovieCoordinator.swift in Sources */,
 				9604286E2C60394700640712 /* FullPhotoViewController.swift in Sources */,
 				960428642C6017E100640712 /* MovieDetailsViewModel.swift in Sources */,
 				965F38A12C5F8FE70059CCDE /* SearchViewController.swift in Sources */,
+				9604288F2C60464A00640712 /* MovieCoordinatorControllersFactory.swift in Sources */,
 				965F38832C5F89F90059CCDE /* AppDelegate.swift in Sources */,
 				965F38BC2C5F96210059CCDE /* UIView + ActivityIndicator.swift in Sources */,
 				960428702C60395400640712 /* FullPhotoViewModel.swift in Sources */,
 				965F38F02C5FD76B0059CCDE /* MoviesNetworkServiceImpl.swift in Sources */,
 				965F38B12C5F922B0059CCDE /* MovieItemTableCell.swift in Sources */,
+				960428842C6044F000640712 /* Presentable.swift in Sources */,
 				965F38852C5F89F90059CCDE /* SceneDelegate.swift in Sources */,
 				965F38F62C6008D80059CCDE /* Collection+Safe.swift in Sources */,
 				965F38E52C5FD3830059CCDE /* PaginationModel.swift in Sources */,
@@ -548,24 +629,31 @@
 				965F38EA2C5FD40C0059CCDE /* NetworkMonitor.swift in Sources */,
 				965F38C22C5F979F0059CCDE /* UITableView+Register.swift in Sources */,
 				965F38C02C5F978A0059CCDE /* UITableViewCell+Shadow.swift in Sources */,
+				960428792C60445D00640712 /* AppCoordinator.swift in Sources */,
 				965F38CA2C5F9ACC0059CCDE /* UIViewController+Alert.swift in Sources */,
 				965F38EC2C5FD60B0059CCDE /* MovieItemDTO.swift in Sources */,
 				965F38BA2C5F95F30059CCDE /* UIImageView+DownloadImage.swift in Sources */,
+				960428822C6044F000640712 /* RouterProtocol.swift in Sources */,
 				965F38A72C5F90800059CCDE /* MovieSortOption.swift in Sources */,
 				960428622C6017CF00640712 /* MovieDetailsViewController.swift in Sources */,
 				965F38A32C5F90420059CCDE /* SearchableTableViewModel.swift in Sources */,
 				965F38D62C5FD2C80059CCDE /* MoviesNetworkError.swift in Sources */,
+				960428882C6045AA00640712 /* AppCoordinatorFactory.swift in Sources */,
 				965F38F32C5FD7860059CCDE /* MoviesTarget.swift in Sources */,
 				965F389B2C5F8C860059CCDE /* MovieListViewController.swift in Sources */,
+				9604287D2C6044C600640712 /* BaseCoordinator.swift in Sources */,
 				965F38E02C5FD34D0059CCDE /* MovieResponseItem.swift in Sources */,
+				960428832C6044F000640712 /* Coordinator.swift in Sources */,
 				965F38DA2C5FD3190059CCDE /* MoviesNetworkService.swift in Sources */,
 				965F38D32C5FD2AF0059CCDE /* NetworkServiceExecutable.swift in Sources */,
 				960428672C60181C00640712 /* NSObject+ClassName.swift in Sources */,
 				965F38C52C5F9A060059CCDE /* AppConstants.swift in Sources */,
 				965F38E22C5FD35B0059CCDE /* GenresResponse.swift in Sources */,
 				960428752C603E1C00640712 /* InteractiveImageView.swift in Sources */,
+				960428862C60451B00640712 /* DeepLinkOption.swift in Sources */,
 				9604286A2C6034FB00640712 /* SeparatedInfoView.swift in Sources */,
 				965F38C72C5F9A2F0059CCDE /* UIMaker.swift in Sources */,
+				9604288A2C6045E300640712 /* Router.swift in Sources */,
 				965F38EE2C5FD6340059CCDE /* MovieGenreType.swift in Sources */,
 				965F389E2C5F8F130059CCDE /* MovieListViewModel.swift in Sources */,
 				965F38D82C5FD2D60059CCDE /* Messages.swift in Sources */,
@@ -716,7 +804,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8QU7S5P236;
+				DEVELOPMENT_TEAM = SV7MAB22UW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MovieDB-iOS/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -728,7 +816,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.oromoon.app;
+				PRODUCT_BUNDLE_IDENTIFIER = "yatimi.MovieDB-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -743,7 +831,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8QU7S5P236;
+				DEVELOPMENT_TEAM = SV7MAB22UW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MovieDB-iOS/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

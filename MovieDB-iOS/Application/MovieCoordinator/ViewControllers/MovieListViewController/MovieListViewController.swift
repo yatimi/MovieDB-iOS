@@ -9,6 +9,10 @@ import UIKit
 
 final class MovieListViewController: SearchViewController {
     
+    // MARK: - Closure
+    
+    var onOpenDetails: ((MovieItemDTO) -> Void)?
+    
     // MARK: - Properties
     
     private let viewModel: MovieListViewModel
@@ -83,10 +87,9 @@ final class MovieListViewController: SearchViewController {
         viewModel.getMovieDetails(at: indexPath) { [weak self] movieItemDTO in
             guard let self = self else { return }
             self.hideLoader()
-            guard let movieItemDTO else { return }
-            let viewModel = MovieDetailsViewModel(movieItemDTO: movieItemDTO)
-            let viewController = MovieDetailsViewController(viewModel: viewModel)
-            self.navigationController?.pushViewController(viewController, animated: true)
+            if let movieItemDTO {
+                self.onOpenDetails?(movieItemDTO)
+            }
         }
     }
     

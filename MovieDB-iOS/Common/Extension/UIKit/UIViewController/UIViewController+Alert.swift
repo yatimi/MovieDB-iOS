@@ -31,14 +31,12 @@ extension UIViewController {
 
 extension UIViewController {
     func showErrorAlert(_ text: String) {
-        #warning("Localize")
-        alert("Error", message: text, style: .alert, actions: [.cancel], preferredAction: nil)
+        alert("error".localize(), message: text, style: .alert, actions: [.cancel], preferredAction: nil)
     }
 }
 
 extension UIAlertAction {
-    #warning("Localize")
     static var cancel: UIAlertAction {
-        UIAlertAction(title: "Cancel", style: .cancel)
+        UIAlertAction(title: "cancel".localize(), style: .cancel)
     }
 }

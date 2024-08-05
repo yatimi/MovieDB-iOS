@@ -147,9 +147,8 @@ class SearchViewController: UIViewController {
     }
     
     private struct Constants {
-        #warning("Localize")
-        static let searchBarPlaceholderText: String = "Find Your Favorite Movies"
-        static let emptyListLabelText: String = "No Movies Found"
+        static let searchBarPlaceholderText: String = "find_your_favorite_movies".localize()
+        static let emptyListLabelText: String = "no_movies_found".localize()
         static let emptyListLabelHInset: CGFloat = 16
     }
 }

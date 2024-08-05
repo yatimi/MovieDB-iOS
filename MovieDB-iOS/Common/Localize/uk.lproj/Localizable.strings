@@ -1,0 +1,54 @@
+/* 
+  Localizable.strings
+  MovieDB-iOS
+
+  Created by Artem Zabihailo on 05.08.2024.
+  
+*/
+
+"popular_movies" = "Популярні фільми";
+"choose_sorting_option" = "Виберіть параметр сортування";
+"organize_movies_by_criteria" = "Упорядкуйте фільми за бажаними критеріями";
+"find_your_favorite_movies" = "Знайдіть свої улюблені фільми";
+"no_movies_found" = "Фільми не знайдено";
+
+"genre_action" = "Бойовик";
+"genre_adventure" = "Пригоди";
+"genre_animation" = "Анімація";
+"genre_comedy" = "Комедія";
+"genre_crime" = "Кримінал";
+"genre_documentary" = "Документальний";
+"genre_drama" = "Драма";
+"genre_family" = "Сімейний";
+"genre_fantasy" = "Фентезі";
+"genre_history" = "Історія";
+"genre_horror" = "Жахи";
+"genre_music" = "Музика";
+"genre_mystery" = "Містика";
+"genre_romance" = "Романтика";
+"genre_science_fiction" = "Наукова фантастика";
+"genre_tv_movie" = "Телефільм";
+"genre_thriller" = "Трилер";
+"genre_war" = "Війна";
+"genre_western" = "Вестерн";
+
+"sorting_popularity_descending" = "За популярністю: спадання";
+"sorting_popularity_ascending" = "За популярністю: зростання";
+"sorting_release_date_descending" = "За датою випуску: спадання";
+"sorting_release_date_ascending" = "За датою випуску: зростання";
+"sorting_vote_average_ascending" = "За оцінкою: зростання";
+"sorting_vote_average_descending" = "За оцінкою: спадання";
+
+"cancel" = "Скасувати";
+"error" = "Помилка";
+
+"error_cannot_decode_response" = "Не вдається декодувати респонс.";
+"error_page_not_available" = "Запитувана сторінка недоступна.\n\nСпробуйте оновити сторінку.";
+"error_network_unavailable" = "Ви офлайн. Будь ласка, увімкніть Wi-Fi або підключіться через мобільні дані.";
+"error_invalid_status_code" = "Неприпустимий статус-код: %d.";
+
+"movie_details_title" = "Назва";
+"movie_details_genres" = "Жанри";
+"movie_details_country_year" = "Країна/Рік";
+"movie_details_overview" = "Огляд";
+"movie_rating" = "Рейтинг: %@";

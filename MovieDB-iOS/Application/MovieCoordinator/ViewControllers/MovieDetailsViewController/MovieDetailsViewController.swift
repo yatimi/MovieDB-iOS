@@ -102,14 +102,12 @@ final class MovieDetailsViewController: UIViewController {
     private func setupInfo() {
         title = viewModel.movieItemDTO.title
         posterImageView.downloadImage(url: viewModel.movieItemDTO.backdropStringURL, withActivity: .medium)
-        #warning("Localize")
-        movieTitleInfoView.setup(title: "Title", subtitle: viewModel.movieItemDTO.title)
-        genreInfoView.setup(title: "Genres", subtitle: viewModel.movieItemDTO.networkGenres)
-        countryAndYearInfoView.setup(title: "Country/Year", subtitle: viewModel.movieItemDTO.countriesAndYear)
-        descriptionInfoView.setup(title: "Overview", subtitle: viewModel.movieItemDTO.overview ?? .init())
-        #warning("Localize")
+        movieTitleInfoView.setup(title: "movie_details_title".localize(), subtitle: viewModel.movieItemDTO.title)
+        genreInfoView.setup(title: "movie_details_genres".localize(), subtitle: viewModel.movieItemDTO.networkGenres)
+        countryAndYearInfoView.setup(title: "movie_details_country_year".localize(), subtitle: viewModel.movieItemDTO.countriesAndYear)
+        descriptionInfoView.setup(title: "movie_details_overview".localize(), subtitle: viewModel.movieItemDTO.overview ?? .init())
         ratingLabel.attributedText = UIMaker.createAttributedText(
-            text: "Rating: \(viewModel.movieItemDTO.averageRating)",
+            text: "movie_rating".localize(arguments: viewModel.movieItemDTO.averageRating),
             symbolName: "star.fill"
         )
     }

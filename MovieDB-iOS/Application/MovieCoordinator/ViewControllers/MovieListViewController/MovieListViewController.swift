@@ -44,7 +44,7 @@ final class MovieListViewController: SearchViewController {
         
         for sortOption in MovieSortOption.allCases {
             let action = UIAlertAction(
-                title: sortOption.rawValue,
+                title: sortOption.localizedName,
                 style: .default
             ) { [weak self] action in
                 self?.viewModel.sortMovies(by: sortOption)
@@ -58,10 +58,9 @@ final class MovieListViewController: SearchViewController {
         
         actions.append(.cancel)
         
-        #warning("Localize")
         showActionSheet(
-            title: "Choose Sorting Option",
-            message: "Organize movies by your preferred criteria",
+            title: "choose_sorting_option".localize(),
+            message: "organize_movies_by_criteria".localize(),
             actions: actions
         )
     }
@@ -164,8 +163,7 @@ final class MovieListViewController: SearchViewController {
     }
     
     private struct Constants {
-        #warning("Localize")
-        static let title: String = "Popular Movies"
+        static let title: String = "popular_movies".localize()
         static let prefetchValue: Int = 10
     }
     

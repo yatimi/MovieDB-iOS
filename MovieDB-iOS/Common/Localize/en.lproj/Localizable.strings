@@ -1,0 +1,56 @@
+/* 
+  Localizable.strings
+  MovieDB-iOS
+
+  Created by Artem Zabihailo on 05.08.2024.
+  
+*/
+
+"popular_movies" = "Popular Movies";
+"choose_sorting_option" = "Choose Sorting Option";
+"organize_movies_by_criteria" = "Organize movies by your preferred criteria";
+"find_your_favorite_movies" = "Find Your Favorite Movies";
+"no_movies_found" = "No Movies Found";
+
+"genre_action" = "Action";
+"genre_adventure" = "Adventure";
+"genre_animation" = "Animation";
+"genre_comedy" = "Comedy";
+"genre_crime" = "Crime";
+"genre_documentary" = "Documentary";
+"genre_drama" = "Drama";
+"genre_family" = "Family";
+"genre_fantasy" = "Fantasy";
+"genre_history" = "History";
+"genre_horror" = "Horror";
+"genre_music" = "Music";
+"genre_mystery" = "Mystery";
+"genre_romance" = "Romance";
+"genre_science_fiction" = "Science Fiction";
+"genre_tv_movie" = "TV Movie";
+"genre_thriller" = "Thriller";
+"genre_war" = "War";
+"genre_western" = "Western";
+
+"sorting_popularity_descending" = "Popularity Descending";
+"sorting_popularity_ascending" = "Popularity Ascending";
+"sorting_release_date_descending" = "Release Date Descending";
+"sorting_release_date_ascending" = "Release Date Ascending";
+"sorting_vote_average_ascending" = "Vote Average Ascending";
+"sorting_vote_average_descending" = "Vote Average Descending";
+
+"cancel" = "Cancel";
+"error" = "Error";
+
+"error_cannot_decode_response" = "Cannot decode response.";
+"error_page_not_available" = "Requested page is not available.\n\nTry refreshing the page.";
+"error_network_unavailable" = "You are offline. Please, enable your Wi-Fi or connect using cellular data.";
+"error_invalid_status_code" = "Invalid status code: %d.";
+
+/* Movie Details */
+"movie_details_title" = "Title";
+"movie_details_genres" = "Genres";
+"movie_details_country_year" = "Country/Year";
+"movie_details_overview" = "Overview";
+"movie_rating" = "Rating: %@";
+

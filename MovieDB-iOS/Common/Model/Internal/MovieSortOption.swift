@@ -7,16 +7,15 @@
 
 import Foundation
 
-enum MovieSortOption: String, CaseIterable {
-    #warning("Localize")
-    case popularityDescending = "Popularity Descending"
-    case popularityAscending = "Popularity Ascending"
+enum MovieSortOption: CaseIterable {
+    case popularityDescending
+    case popularityAscending
     
-    case releaseDateDescending = "Release Date Descending"
-    case releaseDateAscending = "Release Date Ascending"
+    case releaseDateDescending
+    case releaseDateAscending
     
-    case voteAverageAscending = "Vote Average Ascending"
-    case voteAverageDescending = "Vote Average Descending"
+    case voteAverageAscending
+    case voteAverageDescending
     
     var serverValue: String {
         switch self {
@@ -34,4 +33,23 @@ enum MovieSortOption: String, CaseIterable {
             return "vote_average.desc"
         }
     }
+    
+    var localizedName: String {
+        switch self {
+        case .popularityDescending:
+            return "sorting_popularity_descending".localize()
+        case .popularityAscending:
+            return "sorting_popularity_ascending".localize()
+        case .releaseDateDescending:
+            return "sorting_release_date_descending".localize()
+        case .releaseDateAscending:
+            return "sorting_release_date_ascending".localize()
+        case .voteAverageAscending:
+            return "sorting_vote_average_ascending".localize()
+        case .voteAverageDescending:
+            return "sorting_vote_average_descending".localize()
+        }
+    }
+    
 }
+

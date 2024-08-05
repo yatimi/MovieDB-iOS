@@ -7,16 +7,16 @@
 
 import Foundation
 
-
 struct Messages {
     
-    #warning("Localize")
-    static let cannotDecodeResponse = "Cannot decode response."
-    static let pageIsNotAvailable = "Requested page is not available.\n\nTry refreshing the page."
-    static let networkUnavailable = "You are offline. Please, enable your Wi-Fi or connect using cellalar data."
+    // MARK: - Networking
+    
+    static let cannotDecodeResponse = "error_cannot_decode_response".localize()
+    static let pageIsNotAvailable = "error_page_not_available".localize()
+    static let networkUnavailable = "error_network_unavailable".localize()
     
     static func invalidStatusCode(with code: Int) -> String {
-        return "Invalid status code: \(code)."
+        return String(format: "error_invalid_status_code".localize(), code)
     }
     
     static func unexpectedError(with error: Error) -> String {

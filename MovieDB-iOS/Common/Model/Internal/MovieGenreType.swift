@@ -28,28 +28,27 @@ enum MovieGenreType: Int, CaseIterable {
     case war = 10752
     case western = 37
     
-    #warning("Localize")
     var name: String {
         switch self {
-        case .action: return "Action"
-        case .adventure: return "Adventure"
-        case .animation: return "Animation"
-        case .comedy: return "Comedy"
-        case .crime: return "Crime"
-        case .documentary: return "Documentary"
-        case .drama: return "Drama"
-        case .family: return "Family"
-        case .fantasy: return "Fantasy"
-        case .history: return "History"
-        case .horror: return "Horror"
-        case .music: return "Music"
-        case .mystery: return "Mystery"
-        case .romance: return "Romance"
-        case .scienceFiction: return "Science Fiction"
-        case .tvMovie: return "TV Movie"
-        case .thriller: return "Thriller"
-        case .war: return "War"
-        case .western: return "Western"
+        case .action: return "genre_action".localize()
+        case .adventure: return "genre_adventure".localize()
+        case .animation: return "genre_animation".localize()
+        case .comedy: return "genre_comedy".localize()
+        case .crime: return "genre_crime".localize()
+        case .documentary: return "genre_documentary".localize()
+        case .drama: return "genre_drama".localize()
+        case .family: return "genre_family".localize()
+        case .fantasy: return "genre_fantasy".localize()
+        case .history: return "genre_history".localize()
+        case .horror: return "genre_horror".localize()
+        case .music: return "genre_music".localize()
+        case .mystery: return "genre_mystery".localize()
+        case .romance: return "genre_romance".localize()
+        case .scienceFiction: return "genre_science_fiction".localize()
+        case .tvMovie: return "genre_tv_movie".localize()
+        case .thriller: return "genre_thriller".localize()
+        case .war: return "genre_war".localize()
+        case .western: return "genre_western".localize()
         }
     }
 }

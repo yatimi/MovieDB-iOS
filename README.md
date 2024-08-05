@@ -24,6 +24,12 @@ This project uses several libraries, which are integrated using Swift Package Ma
 - **[Alamofire](https://github.com/Alamofire/Alamofire):** Handles network requests efficiently and simplifies API calls.
 - **[SDWebImage](https://github.com/SDWebImage/SDWebImage):** Asynchronously downloads and caches images for better performance and smooth scrolling.
 
+## Localization
+
+- **Languages Supported:**
+  - English (en)
+  - Ukrainian (uk)
+
 ## Installation
 
 To get started with MovieDB, follow these steps:
